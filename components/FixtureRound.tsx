@@ -3,13 +3,13 @@ import React from 'react'
 import TeamSelection from './TeamSelection'
 
 const FixtureRound = async () => {
-    let fixtures = []
+  let fixtures = []
   let fixtureData
   try {
     const res = await fetch(`http://api.football-data.org/v4/competitions/PL/matches/?matchday=29&status=SCHEDULED`, {
       method: "GET",
       headers: {
-        'X-Auth-Token': `${process.env.FOOTBALL_API_KEY}`,
+        'x-apisports-key': `${process.env.API_FOOTBALL_KEY}`,
         'x-rapidapi-host': 'v3.football.api-sports.io'
       }
     })
