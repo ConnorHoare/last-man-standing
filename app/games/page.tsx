@@ -7,7 +7,6 @@ const page = async () => {
     const games = await getLeagueDetails()
     console.log(games)
 
-
     return (
         <div>
             <div className='flex gap-4 '>
